@@ -1,0 +1,22 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant Community Add-on: Thermostart
+# Configures NGINX for use with Thermostart
+# ==============================================================================
+
+# Generate Ingress configuration
+bashio::var.json \
+    entry "$(bashio::addon.ingress_entry)" \
+    | tempio \
+        -template /etc/nginx/templates/ingress.gtpl \
+        -out /etc/nginx/servers/ingress.conf
+
+# Generate direct access configuration, if enabled.
+api_port=$(bashio::addon.port 3888)
+bashio::var.json \
+    entry "$(bashio::addon.ingress_entry)" \
+    port "^${api_port}" \
+    | tempio \
+        -template /etc/nginx/templates/direct.gtpl \
+        -out /etc/nginx/servers/direct.conf

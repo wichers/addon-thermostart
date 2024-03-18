@@ -1,0 +1,20 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant Community Add-on: Thermostart
+# Preparing configuration for Thermostart
+# ==============================================================================
+export DATABASE_PATH=/config/thermostart/thermostart.db
+export DATABASE_URL=sqlite:////config/thermostart/thermostart.db
+export APP_FOLDER=/opt/services/web
+export FLASK_APP=thermostart/__init__.py
+
+if bashio::config.has_value 'secret_key'; then
+    export SECRET_KEY="$(bashio::config 'secret_key')"
+fi
+
+if ! bashio::fs.file_exists "$DATABASE_PATH"; then
+      mkdir -p /config/thermostart
+      cd /opt/services/web
+      python3 manage.py create_db
+fi

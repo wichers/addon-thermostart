@@ -1,8 +1,7 @@
-# Thermostart
+# Home Assistant Community Add-on: Thermostart
 
-Thermostart is an application that you can run to control your useless cloud-connected Thermosmart device.
-
-![Thermostart](https://raw.githubusercontent.com/wichers/addon-thermostart/master/images/screenshot.png)
+Thermostart is an application that you can run to control your
+useless cloud-connected Thermosmart device.
 
 ### Installation
 Add the repository and then the addon by clicking on the badges:\
@@ -11,4 +10,4 @@ Add the repository and then the addon by clicking on the badges:\
 If something goes wrong, you can install it manually.\
 You can add the URL of this page in your "add-on store" as a new repository:\
 *Settings > Add-ons > ADD-ON STORE button in bottom right corner >  three dots in top right corner > Repositories*\
-Click *Check for updates* and you will find the add-on "Thermostart" listed.
+Click *Check for updates* and you will find the add-on "Simple Scheduler" listed.

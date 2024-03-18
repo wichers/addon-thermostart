@@ -1,0 +1,11 @@
+#!/command/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: Thermostart
+# Runs the Nginx daemon
+# ==============================================================================
+
+# Wait for Thermostart to become available
+bashio::net.wait_for 3889
+
+bashio::log.info "Starting NGinx..."
+exec nginx

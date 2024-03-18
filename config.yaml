@@ -1,0 +1,27 @@
+---
+name: Thermostart
+version: dev
+slug: thermostart
+description: Thermostart for Home Assistant
+url: https://github.com/wichers/thermostart
+webui: http://[HOST]:[PORT:3888]
+ingress: true
+panel_icon: mdi:owl
+arch:
+  - aarch64
+  - amd64
+  - armv7
+init: false
+homeassistant_api: true
+ports:
+  3888/tcp: 3888
+ports_description:
+  3888/tcp: Thermostart
+host_network: true
+map:
+  - config:rw
+options:
+  secret_key: some-insecure-SECRETkkkeeeyyy213u02toipw3tj-239jg-23gpo
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  secret_key: str
