@@ -22,6 +22,12 @@ map:
   - config:rw
 options:
   secret_key: some-insecure-SECRETkkkeeeyyy213u02toipw3tj-239jg-23gpo
+  autologin:
+    username: ""
+    password: ""
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   secret_key: str
+  autologin:
+    username: str
+    password: str
