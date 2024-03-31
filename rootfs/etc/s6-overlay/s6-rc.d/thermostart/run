@@ -16,6 +16,14 @@ if bashio::config.has_value 'secret_key'; then
     export SECRET_KEY="$(bashio::config 'secret_key')"
 fi
 
+if bashio::config.has_value 'autologin.username'; then
+    export AUTOLOGIN_USERNAME="$(bashio::config 'autologin.username')"
+fi
+
+if bashio::config.has_value 'autologin.password'; then
+    export AUTOLOGIN_PASSWORD="$(bashio::config 'autologin.password')"
+fi
+
 cd /opt/services/web
 
 exec \
