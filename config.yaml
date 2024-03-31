@@ -1,6 +1,6 @@
 ---
 name: Thermostart
-version: 1.0.0
+version: 1.0.1
 slug: thermostart
 description: Thermostart for Home Assistant
 url: https://github.com/wichers/thermostart
