@@ -18,12 +18,13 @@ if ! bashio::fs.file_exists "$DATABASE_PATH"; then
 fi
 
 cd /opt/services/web
-
+set +e
 python3 manage.py has_alembic_version
 if (test $? -ne 1)
 then
     python3 manage.py db stamp 26422f1f63d0
 fi
+set -e
 python3 manage.py db upgrade
 python3 manage.py fill_db
-exit 0
+
