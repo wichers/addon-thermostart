@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.3
+- fix for flask migrate
+
 ## 1.0.2
 - added flask migrate
 
