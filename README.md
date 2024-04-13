@@ -12,3 +12,8 @@ If something goes wrong, you can install it manually.\
 You can add the URL of this page in your "add-on store" as a new repository:\
 *Settings > Add-ons > ADD-ON STORE button in bottom right corner >  three dots in top right corner > Repositories*\
 Click *Check for updates* and you will find the add-on "Thermostart" listed.
+
+## Support my work
+Thank you for thinking about supporting my work.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/wichers)
