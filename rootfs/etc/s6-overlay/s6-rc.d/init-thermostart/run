@@ -19,7 +19,7 @@ fi
 
 cd /opt/services/web
 set +e
-python manage.py needs_alembic_version
+python3 manage.py needs_alembic_version
 if (test $? -eq 1)
 then
     python3 manage.py db stamp 26422f1f63d0
