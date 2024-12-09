@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.3.3
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.6.2
 FROM ${BUILD_FROM}
 
 ENV \
@@ -17,11 +17,10 @@ RUN \
   apt-get update \
   && apt-get install -y --no-install-recommends \
     build-essential=12.9 \
-    git=1:2.39.2-1.1 \
+    git=1:2.39.5-0+deb12u1 \
     python3-dev=3.11.2-1+b1 \
     python3-pip=23.0.1+dfsg-1 \
     python3=3.11.2-1+b1 \
-    libnginx-mod-http-lua=1:0.10.23-1 \
     nginx=1.22.1-9 \
   \
   && git clone --branch "${THERMOSTART_VERSION}" --depth=1 \

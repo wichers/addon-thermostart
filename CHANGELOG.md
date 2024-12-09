@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.4
+- migrate to 7.6.2 base image
+
 ## 1.0.3
 - fix for flask migrate
 
